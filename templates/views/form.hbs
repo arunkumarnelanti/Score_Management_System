@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-Rack 8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0">
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+
+
+    <link rel="stylesheet" href="/public/css/style.css">
+
+</head>
+<body>
+    
+<!-- Menu Button for Aside Bar -->   
+
+{{>header}}
+
+<main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/" class="fas fa-angle-double-left">All Students</a>
+                </div>
+            </div>
+
+            <div class=".form-title text-center">
+                <h2 class="text-dark">New Student</h2>
+                <span class="text-light">Fill the form to add new students </span>
+            </div>
+        </div>
+</main>
+
+<form id="add_student">
+        <div class="new_student">
+            <div class="form-group">
+                <label for="name" class="text-light">Name</label>
+                <input type="text" name="name" value="" id="name" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="Email" class="text-light">Email</label>
+                <input type="text" name="email" id="email" value="" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="CA1" class="text-light">CA1</label>
+                <input type="text" name="ca1" id="ca1" value="" placeholder="CA1 Marks">
+            </div>
+            <div class="form-group">
+                <label for="CA2" class="text-light">CA2</label>
+                <input type="text" name="ca2" id="ca2" value="" placeholder="CA2 Marks">
+            </div>
+            <div class="form-group">
+                <label for="CA3" class="text-light">CA3</label>
+                <input type="text" name="ca3" id="ca3" value="" placeholder="CA3 Marks">
+            </div>
+            <div class="form-group">
+                <button type="submit" id = "sbtn" class="btn text-dark update">Save</button>
+            </div>
+        </div>
+</form>
+
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>

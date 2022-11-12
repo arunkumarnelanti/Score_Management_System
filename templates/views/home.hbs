@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-Rack 8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0">
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    
+
+
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    
+<!-- Menu Button for Aside Bar -->   
+
+{{>header}}
+
+<main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add" class="border-shadow">
+                    <span class="text-gradient">Add Student <i class="fa-solid fa-user-plus"></i></span>
+                </a>
+            </div>
+            <form action="/" >
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>CA1</th>
+                            <th>CA2</th>
+                            <th>CA3</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each obj}}
+                            <tr class="table-row" id={{this.email}}>
+                                <td class="count"></td>
+                                <td class="table-cell">{{this.name}}</td>
+                                <td class="table-cell" id="em">{{this.email}}</td>
+                                <td class="table-cell">{{this.ca1}}</td>
+                                <td class="table-cell">{{this.ca2}}</td>
+                                <td class="table-cell">{{this.ca3}}</td>
+                                <td>
+                                    
+                                    <a href="/update/{{this.email}}" class="btn border-shadow delete">
+                                        UPD
+                                    </a>
+                                    <input type="button" value="DEL" onclick="dlt()" class="btn border-shadow delete">
+                                        
+                                    </input>
+                                    
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </form>
+        </div>
+</main>
+
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>
